@@ -1,0 +1,27 @@
+# Dependências e builds
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+
+# Variáveis de ambiente / credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
