@@ -1,11 +1,11 @@
-# Auto Center Veloz — Veloz Track
+# Auto Center Veloz — Veloz Track:
 
 Web app de acompanhamento de serviços e aprovação de orçamentos para a **Oficina e Auto Center Veloz**.
 Projeto da disciplina de Design Profissional (Estudo de Caso 3).
 
 **Demo publicada:** https://rennanjkw2019-coder.github.io/autocenter-veloz/
 
-## 1. Briefing do problema
+## 1. Briefing do problema:
 
 A Auto Center Veloz é uma oficina com ótima reputação técnica (5 elevadores, 6 mecânicos, 2 recepcionistas), mas toda a comunicação com o cliente é feita por papel e telefone. Com a carteira de clientes crescendo, isso gerou:
 
@@ -31,13 +31,13 @@ Decisão: **um web app com duas visões** que compartilham os mesmos dados:
 
 Como isso resolve a dor: o cliente deixa de ligar (vê o status sozinho), a aprovação deixa de depender de ligação (reduz o tempo de carro parado) e o histórico com data/hora vira registro de transparência.
 
-## 3. Protótipos / telas
+## 3. Protótipos / telas:
 
 | Início | Cliente (celular) | Painel da oficina |
 |---|---|---|
 | ![Início](docs/home.png) | ![Cliente](docs/cliente.png) | ![Painel](docs/painel.png) |
 
-## 4. Arquitetura
+## 4. Arquitetura:
 
 - **HTML + CSS + JavaScript puro**, sem framework e sem etapa de build (publica direto no GitHub Pages).
 - `js/store.js`: camada de dados. Na demo usa `localStorage`; as abas se sincronizam pelo evento `storage`.
