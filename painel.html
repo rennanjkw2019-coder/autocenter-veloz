@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Painel da oficina — Auto Center Veloz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a class="logo" href="index.html"><b>V</b> Auto Center Veloz</a>
+    <nav><a href="cliente.html">Visão do cliente</a></nav>
+  </div></header>
+
+  <main class="wrap" style="padding:20px 16px">
+    <div class="row" style="align-items:center"><h1 style="font-size:1.6rem">Painel da oficina</h1>
+      <div style="flex:0;white-space:nowrap"><button class="btn ghost sm" id="reset">Restaurar demo</button></div></div>
+    <div class="kpis" id="kpis"></div>
+    <div class="board" id="board"></div>
+
+    <div class="grid g2" style="margin-top:20px">
+      <section class="card">
+        <p id="vazio" class="muted">Selecione um veículo no quadro para ver o orçamento e atualizar o status.</p>
+        <div id="det" class="hide">
+          <h2 id="d-titulo"></h2><p class="muted" id="d-sub"></p>
+          <label for="d-status">Status</label><select id="d-status"></select>
+          <h2 style="margin-top:18px">Orçamento</h2><div id="d-itens"></div>
+          <h2 style="margin-top:18px">Adicionar item</h2>
+          <form id="f-item">
+            <div class="row"><div><label>Tipo</label><select name="tipo"><option value="peca">Peça</option><option value="servico">Serviço</option></select></div>
+              <div><label>Valor (R$)</label><input name="valor" type="number" step="0.01" min="0" required></div></div>
+            <label>Descrição</label><input name="desc" required placeholder="Ex.: Amortecedor traseiro">
+            <label>Foto da peça (opcional)</label><input id="i-foto" type="file" accept="image/*" capture="environment">
+            <p><button class="btn" style="width:100%">Adicionar ao orçamento</button></p>
+          </form>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Receber novo veículo</h2>
+        <form id="f-nova">
+          <div class="row"><div><label>Placa</label><input name="placa" required maxlength="8"></div><div><label>Veículo</label><input name="veiculo" required placeholder="Modelo e ano"></div></div>
+          <div class="row"><div><label>Cliente</label><input name="cliente" required></div><div><label>Telefone</label><input name="fone" required></div></div>
+          <div class="row"><div><label>Mecânico</label><select name="mecanico"><option>Carlos</option><option>Rafael</option></select></div><div><label>Previsão</label><input name="previsao" required placeholder="Hoje, 17h"></div></div>
+          <p><button class="btn" style="width:100%">Abrir ordem de serviço</button></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script src="js/store.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Acompanhar veículo — Auto Center Veloz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a class="logo" href="index.html"><b>V</b> Auto Center Veloz</a>
+    <nav><a href="painel.html">Painel da oficina</a></nav>
+  </div></header>
+
+  <main class="wrap" style="padding:24px 16px;max-width:760px">
+    <section id="tela-busca" class="card">
+      <h1 style="font-size:1.5rem">Acompanhe seu veículo</h1>
+      <p class="muted">Informe a placa e o código que está no comprovante de entrada.</p>
+      <form id="form-busca">
+        <label for="placa">Placa</label>
+        <input id="placa" required maxlength="8" placeholder="ABC1D23" autocomplete="off">
+        <label for="codigo">Código da OS</label>
+        <input id="codigo" required placeholder="VLZ-1042" autocomplete="off">
+        <p id="erro" class="ap-recusado" role="alert"></p>
+        <button class="btn" style="width:100%">Ver meu veículo</button>
+      </form>
+      <p class="muted" style="font-size:13px">Demonstração: placa ABC1D23 · código VLZ-1042</p>
+    </section>
+
+    <section id="tela-os" class="hide">
+      <div class="card" id="cab"></div>
+      <div id="aviso" class="card hide" style="margin-top:16px;border-color:var(--ok)"><b>Seu veículo está pronto!</b> Pode retirar na recepção, de segunda a sábado.</div>
+      <div class="card" style="margin-top:16px"><h2>Orçamento</h2><div id="orc"></div></div>
+      <div class="card" style="margin-top:16px"><h2>Histórico</h2><ul class="tl" id="tl"></ul></div>
+      <p style="text-align:center"><button class="btn ghost sm" id="sair">Consultar outro veículo</button></p>
+    </section>
+  </main>
+
+  <div class="modal" id="zoom"><img alt="Foto ampliada"></div>
+  <script src="js/store.js"></script>
+  <script src="js/cliente.js"></script>
+</body>
+</html>
